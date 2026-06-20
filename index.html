@@ -95,6 +95,10 @@
       display: block;
     }
 
+    .hidden {
+      display: none !important;
+    }
+
     .text-gradient-gold {
       background: linear-gradient(135deg, #f1c361 0%, #ffe088 100%);
       -webkit-background-clip: text;
@@ -162,7 +166,7 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu-panel" class="hidden md:hidden fixed top-24 left-0 right-0 bg-background/95 backdrop-blur-2xl border-b border-surface-container-highest/60 flex-col px-margin-mobile py-8 space-y-6 shadow-2xl z-40">
+    <div id="mobile-menu-panel" class="hidden md:hidden fixed top-24 left-0 right-0 bg-background/95 backdrop-blur-2xl border-b border-surface-container-highest/60 px-margin-mobile py-8 space-y-6 shadow-2xl z-40" aria-hidden="true">
         <button class="nav-item font-sans text-sm font-semibold uppercase tracking-[0.2em] text-left py-2 text-on-surface-variant hover:text-primary" data-view="music">Music</button>
         <button class="nav-item font-sans text-sm font-semibold uppercase tracking-[0.2em] text-left py-2 text-on-surface-variant hover:text-primary" data-view="tour">Tour</button>
         <button class="nav-item font-sans text-sm font-semibold uppercase tracking-[0.2em] text-left py-2 text-on-surface-variant hover:text-primary" data-view="gallery">Gallery</button>
@@ -908,7 +912,8 @@
             });
             window.scrollTo(0,0);
             mobileMenu.classList.add('hidden');
-            mobileMenu.classList.remove('flex');
+            mobileMenu.classList.remove('flex', 'flex-col');
+            mobileMenu.setAttribute('aria-hidden', 'true');
             // Reset mobile menu icon to menu hamburger
             if (mobileMenuOpenBtn) {
                 mobileMenuOpenBtn.innerHTML = '<i data-lucide="menu"></i>';
@@ -923,11 +928,13 @@
         mobileMenuOpenBtn.addEventListener('click', () => {
             const isHidden = mobileMenu.classList.toggle('hidden');
             if (isHidden) {
-                mobileMenu.classList.remove('flex');
+                mobileMenu.classList.remove('flex', 'flex-col');
                 mobileMenuOpenBtn.innerHTML = '<i data-lucide="menu"></i>';
+                mobileMenu.setAttribute('aria-hidden', 'true');
             } else {
-                mobileMenu.classList.add('flex');
+                mobileMenu.classList.add('flex', 'flex-col');
                 mobileMenuOpenBtn.innerHTML = '<i data-lucide="x"></i>';
+                mobileMenu.setAttribute('aria-hidden', 'false');
             }
             lucide.createIcons();
         });
