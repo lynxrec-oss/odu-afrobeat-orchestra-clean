@@ -135,7 +135,7 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu-panel" class="hidden md:hidden fixed top-24 left-0 right-0 bg-background/95 backdrop-blur-2xl border-b border-surface-container-highest/60 flex flex-col px-margin-mobile py-8 space-y-6 shadow-2xl z-40">
+    <div id="mobile-menu-panel" class="hidden md:hidden fixed top-24 left-0 right-0 bg-background/95 backdrop-blur-2xl border-b border-surface-container-highest/60 flex-col px-margin-mobile py-8 space-y-6 shadow-2xl z-40">
         <button class="nav-item font-sans text-sm font-semibold uppercase tracking-[0.2em] text-left py-2 text-on-surface-variant hover:text-primary" data-view="music">Music</button>
         <button class="nav-item font-sans text-sm font-semibold uppercase tracking-[0.2em] text-left py-2 text-on-surface-variant hover:text-primary" data-view="tour">Tour</button>
         <button class="nav-item font-sans text-sm font-semibold uppercase tracking-[0.2em] text-left py-2 text-on-surface-variant hover:text-primary" data-view="gallery">Gallery</button>
@@ -181,7 +181,7 @@
               </div>
               <div class="md:col-span-7">
                 <p class="font-sans text-lg md:text-xl text-on-surface-variant leading-relaxed mb-6">
-                  In Yoruba spirituality, an Odù is one of 256 divinatory principals, each associated with a traditional set of verses (or Ese), representing thousands of years of observations and predictions. In the Detroit music scene, Baba Bg & Odu Afrobeat Orchestra comprised of the city's best musicians, each of different genres, age, race, and background, representing Detroit's strength in its musical diversity, and always delivers nothing short of a spiritual experience with every performance they give.
+                  In Yoruba spirituality, an Odù is one of 256 divinatory principles, each associated with a traditional set of verses (or Ese), representing thousands of years of observations and predictions. In the Detroit music scene, Baba Bg & Odu Afrobeat Orchestra comprised of the city's best musicians, each of different genres, age, race, and background, representing Detroit's strength in its musical diversity, and always delivers nothing short of a spiritual experience with every performance they give.
                 </p>
                 <p class="font-sans text-lg md:text-xl text-on-surface-variant leading-relaxed mb-12">
                   Baba BG is continuing the tradition of Afrobeat by incorporating his own unique style and experiences into the genre. By weaving stories into the music, he is using Afrobeat as a means of communication and expressing his own views and insights about the world, and by pushing the boundaries of the genre and exploring uncharted territories, Baba BG is helping to keep Afrobeat relevant and inspiring for future generations of musicians and fans alike.
@@ -366,7 +366,7 @@
           <div class="prose prose-stone max-w-none space-y-6">
             <h2 class="font-display text-4xl text-secondary mb-8 italic">Biography</h2>
             <p class="font-sans text-on-surface-variant leading-relaxed text-lg">
-              In Yoruba spirituality, an Odù is one of 256 divinatory principals, each associated with a traditional set of verses (or Ese), representing thousands of years of observations and predictions. In the Detroit music scene, Baba BG & Odu Afrobeat Orchestra is comprised of the city's best musicians, each of different genres, age, race, and background, representing Detroit's strength in its musical diversity, and always delivers nothing short of a spiritual experience with every performance they give.
+              In Yoruba spirituality, an Odù is one of 256 divinatory principles, each associated with a traditional set of verses (or Ese), representing thousands of years of observations and predictions. In the Detroit music scene, Baba BG & Odu Afrobeat Orchestra is comprised of the city's best musicians, each of different genres, age, race, and background, representing Detroit's strength in its musical diversity, and always delivers nothing short of a spiritual experience with every performance they give.
             </p>
             <p class="font-sans text-on-surface-variant leading-relaxed text-lg">
               Adeboye Adegbenro (Bàbá BG) is a veteran musician, painter, illustrator, and animator who famously sat in with Fela Kuti and Egypt 80 during the 1980s. He is continuing the tradition of Afrobeat by incorporating his own unique style and experiences into the genre. By weaving stories into the music, he is using Afrobeat as a means of communication and expressing his own views and insights about the world, and by pushing the boundaries of the genre and exploring uncharted territories, Baba BG is helping to keep Afrobeat relevant and inspiring for future generations of musicians and fans alike.
@@ -722,6 +722,7 @@
             });
             window.scrollTo(0,0);
             mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
             // Reset mobile menu icon to menu hamburger
             if (mobileMenuOpenBtn) {
                 mobileMenuOpenBtn.innerHTML = '<i data-lucide="menu"></i>';
@@ -736,8 +737,10 @@
         mobileMenuOpenBtn.addEventListener('click', () => {
             const isHidden = mobileMenu.classList.toggle('hidden');
             if (isHidden) {
+                mobileMenu.classList.remove('flex');
                 mobileMenuOpenBtn.innerHTML = '<i data-lucide="menu"></i>';
             } else {
+                mobileMenu.classList.add('flex');
                 mobileMenuOpenBtn.innerHTML = '<i data-lucide="x"></i>';
             }
             lucide.createIcons();
