@@ -1,0 +1,48 @@
+{
+  "management_email": "mwalimu.mayes@gmail.com",
+  "booking_phone": "+44 (0) 20 7946 0123",
+  "band_overview": "Odu Afrobeat Orchestra is a 13-piece powerhouse ensemble blending Yoruba rhythmic heritage with Detroit’s legendary musical grit. Founded in 2003 and led by vocalist, composer, and creative director Baba BG, the band channels the ancestral thunder of Afrobeat into a modern, cosmic vibrations, and electrifying force built for global stages.",
+  "short_bio": "Baba BG is a Nigerian-born, Detroit-based vocalist, composer, and creative visionary. A veteran animator and special effects artist with credits at Disney, Warner Brothers, and DreamWorks, he brings cinematic imagination into his music, crafting performances that feel both ancestral and futuristic. As founder and bandleader of Odu Afrobeat Orchestra, Baba BG blends Yoruba cosmology, Afrobeat tradition, and Detroit soul into a sound that is rhythmically explosive and spiritually resonant. His mission is simple: to bring the fire of Afrobeat to the world stage with authenticity, power, and purpose.",
+  "full_bio": [
+    "Born into the cultural heartbeat of Yoruba tradition, Baba BG carries a lifelong devotion to rhythm, storytelling, and ancestral memory. His artistic journey spans continents and disciplines — from Lagos to Detroit, from animation studios to global stages.",
+    "As a veteran animator and special effects artist, he contributed to iconic films such as Pocahontas, Mulan, The Iron Giant, Osmosis Jones, and The Road to El Dorado. This cinematic background shapes his musical vision: bold, layered, emotionally charged, and visually evocative.",
+    "In 2003, he founded Odu Afrobeat Orchestra, assembling Detroit’s finest musicians across genres, ages, and backgrounds. Under his leadership, the ensemble has become a spiritual and sonic force — a living bridge between Yoruba ancestral rhythms and contemporary Afrobeat innovation.",
+    "Baba BG’s voice carries grit, warmth, and authority. His compositions honor tradition while pushing Afrobeat into new territory, blending ritual chants, jazz harmonies, and orchestral textures. His performances are not just concerts — they are ceremonies of rhythm, unity, and cultural pride."
+  ],
+  "tracks": [
+    {
+      "title": "FIFA Referee",
+      "artist": "Baba BG & Odu",
+      "img": "single-2.png",
+      "src": "fifa-snippet.wav"
+    },
+    {
+      "title": "Asa",
+      "artist": "Baba BG & Odu",
+      "img": "single-1.png",
+      "src": "asa-snippet.wav"
+    },
+    {
+      "title": "Afrobeat on Broadway",
+      "artist": "Baba BG & Odu",
+      "img": "single-3.png",
+      "src": "afrobeat-snippet.wav"
+    }
+  ],
+  "gallery": [
+    "band_photos/20230416_092635-EDIT-EDIT.jpg",
+    "band_photos/20230416_092711~2.jpg",
+    "band_photos/20230416_092759.jpg",
+    "band_photos/20230416_092848-EDIT.jpg",
+    "band_photos/20230416_093357.jpg",
+    "band_photos/20230416_093629.jpg",
+    "band_photos/20230416_093906.jpg",
+    "band_photos/20230416_094048-EDIT.jpg",
+    "band_photos/20230416_094433.jpg",
+    "band_photos/20230610_190436.jpg",
+    "band_photos/P4160297~2-EDIT.jpg",
+    "band_photos/PSX_20230416_215926.jpg",
+    "band_photos/PSX_20230416_220142.jpg",
+    "band_photos/PSX_20230429_120430.jpg"
+  ]
+}

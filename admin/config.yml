@@ -1,0 +1,54 @@
+backend:
+  name: github
+  repo: lynxrec-oss/odu-afrobeat-orchestra-clean
+  branch: main
+
+media_folder: "band_photos"
+public_folder: "band_photos"
+
+collections:
+  - name: "content"
+    label: "Website Content"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - file: "data.json"
+        name: "data"
+        label: "Home Page Data"
+        fields:
+          - label: "Management Email"
+            name: "management_email"
+            widget: "string"
+            default: "mwalimu.mayes@gmail.com"
+          - label: "Booking Phone"
+            name: "booking_phone"
+            widget: "string"
+            default: "+44 (0) 20 7946 0123"
+          - label: "Band Overview"
+            name: "band_overview"
+            widget: "text"
+            default: "Odu Afrobeat Orchestra is a 13-piece powerhouse ensemble blending Yoruba rhythmic heritage with Detroit’s legendary musical grit. Founded in 2003 and led by vocalist, composer, and creative director Baba BG, the band channels the ancestral thunder of Afrobeat into a modern, cosmic vibrations, and electrifying force built for global stages."
+          - label: "Short Bio"
+            name: "short_bio"
+            widget: "text"
+            default: "Baba BG is a Nigerian-born, Detroit-based vocalist, composer, and creative visionary. A veteran animator and special effects artist with credits at Disney, Warner Brothers, and DreamWorks, he brings cinematic imagination into his music, crafting performances that feel both ancestral and futuristic. As founder and bandleader of Odu Afrobeat Orchestra, Baba BG blends Yoruba cosmology, Afrobeat tradition, and Detroit soul into a sound that is rhythmically explosive and spiritually resonant. His mission is simple: to bring the fire of Afrobeat to the world stage with authenticity, power, and purpose."
+          - label: "Full Bio Paragraphs"
+            name: "full_bio"
+            widget: "list"
+            summary: "{{fields.paragraph}}"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+          - label: "Music Tracks"
+            name: "tracks"
+            widget: "list"
+            summary: "{{fields.title}} by {{fields.artist}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Artist", name: "artist", widget: "string" }
+              - { label: "Cover Image", name: "img", widget: "image" }
+              - { label: "Audio File", name: "src", widget: "file" }
+          - label: "Gallery Photos"
+            name: "gallery"
+            widget: "list"
+            summary: "{{fields.image}}"
+            field: { label: "Image", name: "image", widget: "image" }
