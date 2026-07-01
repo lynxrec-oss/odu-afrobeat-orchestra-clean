@@ -24,7 +24,7 @@ collections:
           - label: "Booking Phone"
             name: "booking_phone"
             widget: "string"
-            default: "+44 (0) 20 7946 0123"
+            default: "313-204-4665"
           - label: "Band Overview"
             name: "band_overview"
             widget: "text"
